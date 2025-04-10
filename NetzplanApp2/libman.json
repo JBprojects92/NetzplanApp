@@ -1,0 +1,52 @@
+{
+  "version": "3.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "boxicons@2.1.4",
+      "destination": "wwwroot/lib/boxicons/",
+      "files": [
+        "fonts/boxicons.eot",
+        "fonts/boxicons.svg",
+        "fonts/boxicons.ttf",
+        "fonts/boxicons.woff",
+        "fonts/boxicons.woff2",
+        "css/animations.css",
+        "css/animations.min.css",
+        "css/boxicons.css",
+        "css/boxicons.min.css",
+        "css/transformations.css",
+        "css/transformations.min.css"
+      ]
+    },
+    {
+      "library": "dagre-d3@0.6.4",
+      "destination": "wwwroot/lib/dagre-d3/"
+    },
+    {
+      "library": "dagre@0.8.5",
+      "destination": "wwwroot/lib/dagre/"
+    },
+    {
+      "library": "graphlib@3.0.1",
+      "destination": "wwwroot/lib/graphlib/"
+    },
+    {
+      "library": "lodash.js@4.17.21",
+      "destination": "wwwroot/lib/lodash.js/",
+      "files": [
+        "lodash.min.js",
+        "lodash.core.min.js",
+        "lodash.fp.min.js",
+        "mapping.fp.min.js"
+      ]
+    },
+    {
+      "library": "d3@7.9.0",
+      "destination": "wwwroot/lib/d3/",
+      "files": [
+        "d3.min.js"
+      ]
+    }
+  ]
+}

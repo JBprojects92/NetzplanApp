@@ -1,0 +1,30 @@
+﻿@model string
+
+<div class="page-container">
+	<div class="d-flex flex-column justify-content-center align-content-center text-center px-3" id="inputGraph">
+		<div><h1 class="display-4 app-title">Berechneter Netzplan</h1></div>
+		<div id="svgcanvas" class="w-100 border border-2 rounded-3 mt-2">
+			<svg id="netzplanSvg" width="100%" height="100%">
+				<g />
+			</svg>
+		</div>	
+		<div class="hstack gap-1">
+			<i class="bx bx-zoom-in legend ms-3"></i>
+			<i class="legend"> Scroll to zoom in/out</i>
+			<i class="bx bx-move legend ms-3"></i>
+			<i class="legend"> Drag to move</i>
+		</div>
+		<div class="d-flex justify-content-between my-3">
+			<div>
+				<button id="dlbutton" class="btn btn-primary"><i class="bx bx-download"></i> SVG</button>
+				<button id="dlbuttonpng" class="btn btn-primary"><i class="bx bx-download"></i> PNG</button>
+			</div>			
+			<a class="btn btn-primary" href="/"><i class="bx bx-arrow-back me-2"></i> Go back</a>
+		</div>
+	</div>
+</div>
+
+<input type="hidden" id="hiddenMessage" value="@Model" />
+<input type="hidden" id="hiddenDirection" value="@ViewBag.Direction" />
+
+<script src="~/js/netzplan.js"></script>

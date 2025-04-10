@@ -1,0 +1,61 @@
+﻿@{
+    ViewData [ "Title" ] = "Home Page";
+}
+<div id="dragOverlay">📂 Datei ablegen zum Hochladen</div>
+<div class="container page-container">
+    <div class="d-flex flex-column justify-content-center align-items-center text-center px-3">
+        <h1 class="display-4 app-title position-relative">Netzplan App<span class="position-absolute start-100 translate-middle badge bg-danger" style="font-size: 1rem; top: 15%">BETA</span></h1>
+        <p class="lead app-description">
+            Laden Sie Ihre <code>.csv</code>-Datei hoch, um den Netzplan zu berechnen.
+            Der Netzplan wird visuell dargestellt, wobei der <strong>kritische Pfad</strong> hervorgehoben wird.
+            Du kannst den Netzplan <em>horizontal</em> oder <em>vertikal</em> anzeigen lassen und ihn anschließend als Grafik herunterladen.
+        </p>
+
+        <form asp-action="Netzplan" id="formcontainer" method="post" enctype="multipart/form-data" class="w-100 form-container" style="max-width: 800px;">
+
+            <!-- Drag & Drop Zone -->
+            <div id="dropZone" class="mb-4 dropZone">
+                <i class="bx bx-cloud-upload upload-icon"></i>
+                <b>Drag & Drop deine .csv hier oder klick um eine Datei auszuwählen</b>
+            </div>
+
+            <!-- File Input -->
+            <div class="mb-4">
+                <input type="file" class="form-control form-control-lg" id="fileInput" />
+            </div>
+
+            <!-- Textarea for file content -->
+            <div class="mb-4">
+                <textarea id="fileContent" class="form-control fileContent" name="csv" rows="7" placeholder="Dateiinhalt wird hier angezeigt..." style="resize: vertical;"></textarea>
+            </div>
+
+            <!-- Radiobuttons for horizontal or vertical-->
+            <div class="display-options">
+                <h5 class="mb-3">Anzeigeoptionen</h5>
+                <div class="d-flex justify-content-center gap-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="option" id="inlineRadio1" value="LR" checked>
+                        <label class="form-check-label" for="inlineRadio1">
+                            <i class="bx bx-right-arrow-alt"></i> Horizontal
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="option" id="inlineRadio2" value="TB">
+                        <label class="form-check-label" for="inlineRadio2">
+                            <i class="bx bx-down-arrow-alt"></i> Vertikal
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary btn-lg px-5">
+                    <i class="bx bx-calculator me-2"></i> Netzplan berechnen
+                </button>               
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="~/js/dragndrop.js"></script>

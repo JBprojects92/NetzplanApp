@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NetzplanApp</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/NetzplanApp2.styles.css" asp-append-version="true" />
+	<link href="~/lib/boxicons/css/boxicons.min.css" rel="stylesheet" />
+	<link href="~/lib/boxicons/css/boxicons.css" rel="stylesheet" />
+</head>
+<body class="body-dark">
+    <header>
+    </header>
+    <div class="container w-75">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - NetzplanApp
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/lib/d3/d3.min.js"></script>
+	<script src="~/lib/lodash.js/lodash.core.min.js"></script>
+	<script src="~/lib/lodash.js/lodash.min.js"></script>
+	<script src="~/lib/graphlib/graphlib.core.min.js"></script>
+	<script src="~/lib/graphlib/graphlib.min.js"></script>
+	<script src="~/lib/dagre/dagre.core.min.js"></script>
+	<script src="~/lib/dagre/dagre.min.js"></script>
+	<script src="~/lib/dagre-d3/dagre-d3.core.min.js"></script>
+	<script src="~/lib/dagre-d3/dagre-d3.min.js"></script>
+	<script src="~/lib/save-svg-as-png/savesvgaspng.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
